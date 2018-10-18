@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App_Op"
+             x:Class="App_Op.Pag_Inventario1"
+             Title="Inventario">
+    
+    <ContentPage.BindingContext>
+        <local:Inventario_NI/>
+    </ContentPage.BindingContext>
+    
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
+                <RelativeLayout>
+                    <BoxView BackgroundColor="Black" HeightRequest="60" WidthRequest="180"/>
+                    <Button Text="EQUIPO" TextColor="White" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                    <BoxView BackgroundColor="Gray" HeightRequest="60" WidthRequest="180" Margin="180,0"/>
+                    <Button Text="CONSUMIBLES" Clicked="Boton_Consumibles" Margin="180,0,0,0" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                </RelativeLayout>
+
+                <RelativeLayout BackgroundColor="AliceBlue" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" HeightRequest="180" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <Button Text="Agregar" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=-3}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=260}" HeightRequest="40" WidthRequest="100" FontSize="10" />
+
+                    <RelativeLayout BackgroundColor="AntiqueWhite" Margin="5,0,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=35}" HeightRequest="130" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                        <Label Text="EV 1000 IN" TextColor="Black" Margin="8,8,0,0" FontSize="12"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="100" HeightRequest="80" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"/>
+                        <Button BorderRadius="15" BackgroundColor="Gray" Text="6" HeightRequest="30" WidthRequest="30" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X, Factor=0, Constant = 120}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" FontSize="9" />
+                        <Button BorderRadius="15" BackgroundColor="Accent" Text="3" HeightRequest="30" WidthRequest="30" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X, Factor=0, Constant = 160}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" FontSize="9" />
+                        <Button BorderRadius="15" BackgroundColor="Accent" Text="1" HeightRequest="30" WidthRequest="30" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X, Factor=0, Constant = 205}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" FontSize="9" />
+                        <Button BorderRadius="15" BackgroundColor="Accent" Text="1" HeightRequest="30" WidthRequest="30" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X, Factor=0, Constant = 247}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" FontSize="9" />
+                        <Button BorderRadius="15" BackgroundColor="Accent" Text="1" HeightRequest="30" WidthRequest="30" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X, Factor=0, Constant = 290}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" FontSize="9" />
+                        <Label Text="Total" TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Renta" TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=160}"/>
+                        <Label Text="Bodega" TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=200}"/>
+                        <Label Text="Mtto." TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=250}"/>
+                        <Label Text="Operador" TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=285}"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <Label Text=" Equipo                 Estado" Margin="0,227" TextColor="Black"/>
+
+                <ListView ItemsSource="{Binding Equipos}" 
+                              HasUnevenRows="True" 
+                              Margin="15,250" 
+                              ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" Margin="0,10,0,10"/>
+                                    <Image Source="operador" Margin="50,-37,0,10" HeightRequest="25" WidthRequest="25" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                    <Label Text="Renta &#10;0017-Mar-2018" VerticalOptions="Center" HorizontalOptions="Start" Margin="100,-41,0,10"/>
+                                    <BoxView BackgroundColor="#0B19A9" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="40" HeightRequest="10"  Margin="230,-37,0,10"/>
+                                    <Label Text="Componentes" HorizontalTextAlignment="Center" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="N° Parte          Descripción                                            Lote/N° Serie" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EV 1000M       Monitor de gasto cardico continuo               TPAB056511" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVMB1             Soporte para monitor EV 1000                       197783002A" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EV1000DB       Databox, Marca Edwarsds Lifesciences    EVD81650" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVBB1              Soporte para Databox                                       197784002A" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="OM2                  Módulo Óptico para Scv02                              C2796" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVFTC1           Cable para gasto cardiaco continuo             S15603" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVEC1              Cable ethernet                                                      NA" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVVVTC1        Cable para conexión de sensor                      S15404" IsVisible="{Binding IsVisible}"/>
+                                    <Label FontSize="9" Text="EVPB1             Soporte para bateria                                           198996002" IsVisible="{Binding IsVisible}"/>
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RelativeLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,10 +16,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Inventario_NI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MenuItems\MasterPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NoInvasivo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pag_Ayuda.xaml.cs">
       <DependentUpon>Pag_Ayuda.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -34,6 +36,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pag_Configuracion.xaml.cs">
       <DependentUpon>Pag_Configuracion.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pag_Consumibles.xaml.cs">
+      <DependentUpon>Pag_Consumibles.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pag_Consumibles1.xaml.cs">
+      <DependentUpon>Pag_Consumibles1.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pag_DetalleR.xaml.cs">
@@ -54,6 +64,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pag_Inventario.xaml.cs">
       <DependentUpon>Pag_Inventario.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pag_Inventario1.xaml.cs">
+      <DependentUpon>Pag_Inventario1.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pag_Login.xaml.cs">
@@ -160,6 +174,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pag_Incidencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pag_Consumibles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pag_Inventario1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pag_Consumibles1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

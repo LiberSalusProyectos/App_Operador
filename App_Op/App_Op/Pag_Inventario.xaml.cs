@@ -16,5 +16,15 @@ namespace App_Op
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void ButtonConsumibles_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Pag_Consumibles());
+        }
+
+        private void ButtonTotal_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Pag_Inventario1());
+        }
+    }
 }

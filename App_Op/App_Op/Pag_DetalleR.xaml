@@ -38,7 +38,7 @@
                 <BoxView BackgroundColor="#0B19A9" WidthRequest="150" HeightRequest="25" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=180}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=5}"/>
 
             </RelativeLayout>
-            
+
             <ListView ItemsSource="{Binding Products}"
               HasUnevenRows="True"
               Margin="10,230"
@@ -56,12 +56,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
         </RelativeLayout>
-        
-        
     </ContentPage.Content>
-
-
-    
 </ContentPage>

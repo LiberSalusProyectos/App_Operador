@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="App_Op.Pag_Incidencias"
+             Title="Incidentes">
+    <ContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
+                <RelativeLayout>
+                    <BoxView BackgroundColor="Gray" HeightRequest="60" WidthRequest="180"/>
+                    <Button Text="RENTAS" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="Start" Clicked="ButtonRentas_Clicked" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                    <BoxView BackgroundColor="Black" HeightRequest="60" WidthRequest="180" Margin="180,0"/>
+                    <Button Text="INCIDENTES" TextColor="White" Margin="180,0,0,0" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                </RelativeLayout>
+
+                <RelativeLayout BackgroundColor="AliceBlue" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" HeightRequest="500" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <Label Text="2018" TextColor="Black" Font="Calibri" FontAttributes="Bold" Margin="5,3,0,0"/>
+                    <Label Text="Septiembre" TextColor="Black" Font="Calibri" FontAttributes="Bold" Margin="5,20,0,0"/>
+
+                    <RelativeLayout BackgroundColor="AntiqueWhite" Margin="5,5,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=40}" HeightRequest="130" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+                        <Label Text="0011-SEP-2018" TextColor="Black" Margin="8,8,0,0" FontSize="12"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="100" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"/>
+                        <Image Source="operador.png" Margin="8,80,0,0" HeightRequest="40" WidthRequest="40"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="60" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=50}"/>
+                        <Label Text="Cliente:        Sanatorio Durango" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=10}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Persona:     Dr. Victor Camacho Pacheco" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Tipo de &#10; Incidente:  12/Septiembre/2018" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=40}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <BoxView BackgroundColor="#0B19A9" WidthRequest="100" HeightRequest="10" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Completada" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=90}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <controls:CheckBox DefaultText="Resuelto" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=250}"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout BackgroundColor="AntiqueWhite" Margin="5,0,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=185}" HeightRequest="130" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                        <Label Text="0011-SEP-2018" TextColor="Black" Margin="8,8,0,0" FontSize="12"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="100" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"/>
+                        <Image Source="operador.png" Margin="8,80,0,0" HeightRequest="40" WidthRequest="40"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="60" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=50}"/>
+                        <Label Text="Cliente:        Sanatorio Durango" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=10}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Persona:     Dr. Victor Camacho Pacheco" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Tipo de &#10; Incidente:  12/Septiembre/2018" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=40}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <BoxView BackgroundColor="#0B19A9" WidthRequest="100" HeightRequest="10" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Completada" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=90}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <controls:CheckBox DefaultText="Resuelto" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=250}"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout BackgroundColor="AntiqueWhite" Margin="5,0,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=325}" HeightRequest="130" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                        <Label Text="0011-SEP-2018" TextColor="Black" Margin="8,8,0,0" FontSize="12"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="100" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}"/>
+                        <Image Source="operador.png" Margin="8,80,0,0" HeightRequest="40" WidthRequest="40"/>
+                        <BoxView BackgroundColor="Gray" WidthRequest="60" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=50}"/>
+                        <Label Text="Cliente:        Sanatorio Durango" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=10}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Persona:     Dr. Victor Camacho Pacheco" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Tipo de &#10; Incidente:  12/Septiembre/2018" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=40}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <BoxView BackgroundColor="#0B19A9" WidthRequest="100" HeightRequest="10" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <Label Text="Completada" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=90}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                        <controls:CheckBox DefaultText="Resuelto" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=250}"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App_Op"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="App_Op.Pag_DetalleR"
+             Title="Detalle de Renta">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <RelativeLayout>
+            <RelativeLayout>
+                <Image Source="operador.png" Margin="10,15,0,0" HeightRequest="40" WidthRequest="40"/>
+                <BoxView BackgroundColor="Gray" WidthRequest="50" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=15}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=60}" />
+                <BoxView BackgroundColor="Gray" WidthRequest="100" HeightRequest="60" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
+
+                <Label Text="Cliente:" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=15}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}" />
+                <Label Text="Médico:" FontSize="11" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}" />
+                <Label Text="Evento:" FontSize="11" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}" />
+                <Label Text="Hora:" FontSize="11" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}" />
+                <Label Text="Inicio:" FontSize="11" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=95}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}" />
+
+                <Label Text="Sanatorio Durango" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=15}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=170}" />
+                <Label Text="Dr. Victor Camacho Pacheco" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=30}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=170}"/>
+                <Label Text="12/Septiembre/2018" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=170}"/>
+                <Label Text="18:50" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=80}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=170}"/>
+                <Label Text="19:50" FontSize="11" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=95}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=170}"/>
+
+                <Image Source="phone.png" Margin="320,10,0,0" />
+                <Image Source="archivo.png" Margin="320,40,0,0" />
+                <Image Source="resumen.png" Margin="320,70,0,0" />
+                <Label Text="Resumen" FontSize="11" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=310}"/>
+                <Label Text="INSTALACIÓN" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black"  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=140}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=120}"/>
+                <BoxView BackgroundColor="PowderBlue" WidthRequest="350" HeightRequest="25" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=180}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=5}"/>
+                <BoxView BackgroundColor="#0B19A9" WidthRequest="150" HeightRequest="25" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=180}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=5}"/>
+
+            </RelativeLayout>
+            
+            <ListView ItemsSource="{Binding Products}"
+              HasUnevenRows="True"
+              Margin="10,230"
+              ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" Margin="0,10,0,10"/>
+                                <controls:CheckBox DefaultText="Instrucciones por definir" 
+                                                   IsVisible="{Binding IsVisible}"
+                                                   Margin="0,5,0,5"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </RelativeLayout>
+        
+        
+    </ContentPage.Content>
+
+
+    
+</ContentPage>

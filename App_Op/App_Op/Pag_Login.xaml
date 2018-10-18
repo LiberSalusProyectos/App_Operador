@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Op.Pag_Login">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     Margin="20,0,20,0">
+            <Label Text="SIREN" Font="Calibri" TextColor="#0B19A9" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <Entry x:Name="entradaCorreo"
+                   Placeholder="Correo Electronico"
+                   Keyboard="Email"/>
+            <Entry x:Name="entradaPassword"
+                   Placeholder="Contraseña"
+                   IsPassword="True"/>
+            <Button x:Name="LoginButton"
+                    Text="Log In"
+                    Clicked="LoginButton_Clicked"
+                    BackgroundColor="#0B19A9"/>
+            <Label Text="¿Olvidaste tu contraseña?, Da clic aqui" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

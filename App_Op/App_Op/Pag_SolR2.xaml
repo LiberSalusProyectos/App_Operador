@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="App_Op.Pag_SolR2"
+             Title="Paso 2">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <RelativeLayout  VerticalOptions="Start" Margin="10,10,10,0">
+                <Button Margin="10,10,0,0" Text="Paso 1"  BackgroundColor="Black" TextColor="White"/>
+                <Button Margin="130,10,0,0" Text="Paso 2" BackgroundColor="Black" TextColor="White"/>
+                <Button Margin="250,10,0,0" Text="Paso 3" Clicked="ButtonPaso3_Clicked"/>
+            </RelativeLayout>
+
+            <RelativeLayout  Margin="5,10,5,5">
+                <Label Text="Paso 2 - Evento" FontSize="11" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Margin="145,10,0,0"/>
+                <BoxView BackgroundColor="Gray" HeightRequest="200" WidthRequest="200" Margin="5,35"/>
+                <Label Text="Hora" Margin="250,35,0,0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                <Entry Placeholder="HH:" Margin="235,60,0,0" FontSize="12" />
+                <Entry Placeholder="MM" Margin="265,60,0,0" FontSize="12"/>
+                <Switch HorizontalOptions="Center" Margin="240,90,0,0"/>
+                <Label Text="Urgente" Margin="245,110,0,0"/>
+                <Label Text="Info del Hospital" Margin="145,255,0,0" FontSize="11"/>
+
+                <TableView Intent="Form" Margin="0,260,0,0">
+                    <TableRoot>
+                        <TableSection>
+                            <EntryCell Label="Dirección" HorizontalTextAlignment="Start"/>
+                            <EntryCell Label="Teléfonos" HorizontalTextAlignment="Start"/>
+                            <EntryCell Label="Correos" HorizontalTextAlignment="Start"/>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

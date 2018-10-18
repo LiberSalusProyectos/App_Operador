@@ -11,7 +11,7 @@
                     <BoxView BackgroundColor="Gray" HeightRequest="60" WidthRequest="180"/>
                     <Button Text="RENTAS" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="Start" Clicked="ButtonRentas_Clicked" BackgroundColor="Transparent" BorderColor="Transparent"/>
                     <BoxView BackgroundColor="Black" HeightRequest="60" WidthRequest="180" Margin="180,0"/>
-                    <Button Text="INCIDENTES" TextColor="White" Margin="180,0,0,0" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                    <Button Text="Incidentes" TextColor="White" Margin="180,0,0,0" HeightRequest="60" WidthRequest="180" VerticalOptions="Start" HorizontalOptions="End" BackgroundColor="Transparent" BorderColor="Transparent"/>
                 </RelativeLayout>
 
                 <RelativeLayout BackgroundColor="AliceBlue" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" HeightRequest="500" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">

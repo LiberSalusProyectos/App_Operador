@@ -28,7 +28,7 @@
                     <Label Text="Operador" TextColor="Black" FontSize="12" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}"/>
                 </RelativeLayout>
 
-                <TableView Intent="Form" Margin="0,260,0,0">
+                <TableView Intent="Form" Margin="0,180,0,0">
                     <TableRoot>
                         <TableSection>
                             <TextCell Text="Equipo      Estado     Cantidad      Lote        Caducidad"/>

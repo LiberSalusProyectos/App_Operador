@@ -24,7 +24,7 @@ namespace App_Op
             User user = new User(entradaCorreo.Text, entradaPassword.Text);
             if (user.CheckInformation())
             {
-                await DisplayAlert("Login", "Acceso Correcto", "Ok");
+                
                 await Navigation.PushModalAsync(new MainPage());
             }
             else

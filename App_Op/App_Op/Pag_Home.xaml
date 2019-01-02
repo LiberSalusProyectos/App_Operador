@@ -2,41 +2,45 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Op.Pag_Home"
-             Title="Home">
+             Title="Home"
+             BackgroundColor="#C9E8EE">
 
     <ContentPage.Content>
         <ScrollView>
             <RelativeLayout>
 
-                <RelativeLayout Margin="5,5,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=5}" HeightRequest="140" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
-                    <Label Text="Solicitudes entrantes" TextColor="Black" Margin="5,3,0,0" Font="Calibri" FontAttributes="Bold"/>
-                    <Image Source="agregar.png" Margin="320,0,0,0" HeightRequest="30" WidthRequest="30"/>
-                    <Button Clicked="ButtonAgregar_Clicked" BackgroundColor="Transparent" BorderColor="Transparent" Margin="320,0,0,0" HeightRequest="30" WidthRequest="30"/>
-                    <BoxView BackgroundColor="Gray" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=28}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
-                    <BoxView BackgroundColor="Gray" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=64}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
-                    <BoxView BackgroundColor="Gray" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
+                <BoxView BackgroundColor="#0FAACA" WidthRequest="400" HeightRequest="20"/>
 
-                    <Label FontSize="12" TextColor="Black" Text="0013-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=35}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}" />
-                    <Label FontSize="12" TextColor="Black" Text="0012-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}" />
-                    <Label FontSize="12" TextColor="Black" Text="0011-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=105}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}"/>
 
-                    <Label FontSize="12" TextColor="Black" Text="22/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
-                    <Label FontSize="12" TextColor="Black" Text="15:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=38}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
-                    <Label FontSize="12" TextColor="Black" Text="12/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=64}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
-                    <Label FontSize="12" TextColor="Black" Text="8:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=75}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
-                    <Label FontSize="12" TextColor="Black" Text="2/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=99}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
-                    <Label FontSize="12" TextColor="Black" Text="10:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=110}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label Text="Solicitudes entrantes" TextColor="White" Margin="10,0,0,0" Font="Calibri" FontAttributes="Bold"/>
+                <Image Source="agregar.png" Margin="320,0,0,0" HeightRequest="30" WidthRequest="30" />
+                <Button Clicked="ButtonAgregar_Clicked" BackgroundColor="Transparent" BorderColor="White" BorderRadius="15" Margin="320,0,0,0" HeightRequest="30" WidthRequest="30"/>
+                <BoxView BackgroundColor="Gray" Opacity="20" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=28}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
+                <BoxView BackgroundColor="Gray" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=64}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
+                <BoxView BackgroundColor="Gray" WidthRequest="90" HeightRequest="30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=10}" />
 
-                    <Label FontSize="12" TextColor="Black" Text="EV100-NI" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=27}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}" />
-                    <Label FontSize="12" TextColor="Black" Text="EV100-IN" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}" />
-                    <Label FontSize="12" TextColor="Black" Text="EV100-IN" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}"/>
-                </RelativeLayout>
+                <Label FontSize="12" TextColor="Black" Text="0013-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=35}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}" />
+                <Label FontSize="12" TextColor="Black" Text="0012-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}" />
+                <Label FontSize="12" TextColor="Black" Text="0011-Sep-2018" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=105}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=110}"/>
+
+                <Label FontSize="12" TextColor="Black" Text="22/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label FontSize="12" TextColor="Black" Text="15:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=38}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label FontSize="12" TextColor="Black" Text="12/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=64}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label FontSize="12" TextColor="Black" Text="8:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=75}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label FontSize="12" TextColor="Black" Text="2/09/18" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=99}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+                <Label FontSize="12" TextColor="Black" Text="10:30" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=110}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=20}"/>
+
+                <Label FontSize="12" TextColor="Black" Text="EV100-NI" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=27}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}" />
+                <Label FontSize="12" TextColor="Black" Text="EV100-IN" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}" />
+                <Label FontSize="12" TextColor="Black" Text="EV100-IN" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=270}"/>
+
+
+
 
                 <RelativeLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=160}" HeightRequest="350" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                     <Label Text="Solicitudes activas" TextColor="Black" Font="Calibri" FontAttributes="Bold" Margin="5,3,0,0"/>
 
                     <RelativeLayout Margin="5,5,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=20}" HeightRequest="100" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" BackgroundColor="AliceBlue">
-
                         <Label Text="0011-Sep-2018" TextColor="Black" Margin="5,3,0,0" FontAttributes="Bold"/>
                         <Image Source="operador.png" Margin="10,25,0,0" HeightRequest="50" WidthRequest="50"/>
                         <BoxView BackgroundColor="Gray" WidthRequest="110" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=70}"/>
@@ -59,7 +63,7 @@
                         <Label Text="Enviar acuerdos a hospital" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=60}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0.5, Constant=190}"/>
                     </RelativeLayout>
 
-                    <RelativeLayout BackgroundColor="AliceBlue" Margin="5,0,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=240}" HeightRequest="100" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <RelativeLayout BackgroundColor="AliceBlue" Margin="5,0,5,0" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=235}" HeightRequest="100" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                         <Label Text="0011-Sep-2018" TextColor="Black" Margin="5,0,0,0" FontAttributes="Bold"/>
                         <Image Source="operador.png" Margin="10,25,10,0" HeightRequest="50" WidthRequest="50"/>
                         <BoxView BackgroundColor="Gray" WidthRequest="110" HeightRequest="40" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=25}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=70}"/>
@@ -69,6 +73,7 @@
                         <Label Text="Enviar factura" TextColor="Black" FontSize="11" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=70}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0.5, Constant=190}"/>
 
                     </RelativeLayout>
+
                 </RelativeLayout>
             </RelativeLayout>
         </ScrollView>

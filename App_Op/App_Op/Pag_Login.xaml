@@ -1,22 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Op.Pag_Login">
+             x:Class="App_Op.Pag_Login"
+             BackgroundImage="fondo.png">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center"
-                     Margin="20,0,20,0">
-            <Label Text="SIREN" Font="Calibri" TextColor="#0B19A9" FontSize="40" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
-            <Entry x:Name="entradaCorreo"
-                   Placeholder="Correo Electronico"
-                   Keyboard="Email"/>
-            <Entry x:Name="entradaPassword"
-                   Placeholder="Contraseña"
-                   IsPassword="True"/>
-            <Button x:Name="LoginButton"
-                    Text="Log In"
-                    Clicked="LoginButton_Clicked"
-                    BackgroundColor="#0B19A9"/>
-            <Label Text="¿Olvidaste tu contraseña?, Da clic aqui" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
-        </StackLayout>
+        <RelativeLayout>
+            <Image x:Name="logo" Source="logo.png" Scale="0.6"/>
+            <Label Text="Bienvenido" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="100,180,0,0" FontSize="30" />
+
+            <Image x:Name="user" Source="icon_user.png" Margin="40,255,0,0"/>
+            <Entry x:Name="entradaCorreo" Placeholder="Correo Electronico" Text="{Binding Username}" Keyboard="Email" WidthRequest="250" HeightRequest="35" Margin="70,250,0,0" FontSize="14"/>
+
+            <Image x:Name="password" Source="icon_password.png" Margin="40,305,0,0"/>
+            <Entry x:Name="entradaPassword" Placeholder="Contraseña" Text="{Binding Password}" IsPassword="True" WidthRequest="250" HeightRequest="35" Margin="70,300,0,0" FontSize="14"/>
+
+            <!--<Image Source="huella.png" Margin="156, 400, 0, 0"/>
+            <Label Text="Toca para ingresar con huella" Margin="100,450,0,0" TextColor="White" FontSize="15"/>-->
+
+            <Label x:Name="timeElapsed" Text="{Binding DisplayTimeElapsed}"  TextColor="#555" FontSize="20" FontAttributes="Bold" IsVisible="False"/>
+
+            <Button x:Name="LoginButton" Text="Entrar" Clicked="LoginButton_Clicked" BackgroundColor="#0076AE" FontSize="12" WidthRequest="150" HeightRequest="35" BorderRadius="6" Margin="105,480,0,0" TextColor="White"/>
+            <Button Text="Olvidé mi contraseña" BackgroundColor="#F7A416" FontSize="12" WidthRequest="200" HeightRequest="35" BorderRadius="6" Margin="80,520,0,0" TextColor="White"/>
+
+            <Label x:Name="messageLabel" Text=""  FontSize="20" IsVisible="True"/>
+
+            <Grid>
+
+                <ActivityIndicator x:Name="activityIndicator" IsRunning="{Binding IsBusy}" Margin="150,250,0,0"  Color="#0076AE"/>
+
+            </Grid>
+
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
